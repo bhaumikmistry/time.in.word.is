@@ -3,13 +3,14 @@ class TimeFactory {
         this.hour = 0;
         this.min = 0;
     }
+    // update time to class methods 
     updateTime() {
         console.log("updateTime()")
         var date = new Date;
         this.min = date.getMinutes();
         this.hour = date.getHours();
         if (this.hour > 12) {
-            this.hour = (this.hour % 12) + 1;
+            this.hour = (this.hour % 12);
         }
         console.log("hour:" + this.hour + ", min:" + this.min);
     }
@@ -49,7 +50,7 @@ class TimeFactory {
             time = `${translator.toWords(this.min)} minutes past ${translator.toWords(this.hour)}`;
         }
         else if (this.min > 30) {
-            time = `${translator.toWords(60 - this.min)} minutes to ${translator.toWords(this.hour)}`;
+            time = `${translator.toWords(60 - this.min)} minutes to ${translator.toWords(this.hour + 1)}`;
         }
         return time;
     }
