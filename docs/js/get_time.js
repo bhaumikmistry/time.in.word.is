@@ -29,7 +29,11 @@ class TimeFactory {
         let time = "Error!";
         
         if (this.min == 0){
-            time = `${translator.toWords(this.hour)} o' clock`;
+            if (this.hour == 0){
+                time = "midnight";
+            } else{
+                time = `${translator.toWords(this.hour)} o' clock`;
+            }
         }
         else if (this.min == 1) {
             time = `one minute past ${translator.toWords(this.hour)}`;
@@ -52,6 +56,7 @@ class TimeFactory {
         else if (this.min > 30) {
             time = `${translator.toWords(60 - this.min)} minutes to ${translator.toWords(this.hour + 1)}`;
         }
+        time = time.replace("zero", "midnight")
         return time;
     }
 }
