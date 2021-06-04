@@ -1,8 +1,4 @@
-# work-from-home-desk
-a visual look of my work from home desk.
+# time.in.word.is
+a word format of time.is website: https://time.is/
 
-
-- add info about the scss converter to run
-- make a layout 
-- get the layout on paper 
-- start digital work on it
+Checkout webpage https://bhaumikmistry.github.io/time.in.word.is/
